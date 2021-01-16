@@ -11,7 +11,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     Timer(
-      Duration(seconds: 5),
+      Duration(seconds: 3),
       openOnBoard,
     );
     super.initState();
