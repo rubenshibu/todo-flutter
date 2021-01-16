@@ -25,6 +25,7 @@ class _loginPageState extends State<loginPage> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
+          onPressed: null,
           icon: Icon(
             Icons.arrow_back,
             color: Colors.black,
@@ -40,7 +41,7 @@ class _loginPageState extends State<loginPage> {
             Text("Welcome Back!", style: TextStyle(
               fontSize: 35
             ),),
-            Text("Sign in to continue...", style: TextStyle(
+            Text("Sign in to continue", style: TextStyle(
                 fontSize: 18,
               color: Colors.grey
             ),),
@@ -50,7 +51,7 @@ class _loginPageState extends State<loginPage> {
             ),),
             TextField(
               decoration: InputDecoration(
-                hintText: "John Doe"
+                hintText: "Shan Shaji"
               ),
               style: TextStyle(
                 fontSize: 20
@@ -62,7 +63,7 @@ class _loginPageState extends State<loginPage> {
             ),),
             TextField(
               decoration: InputDecoration(
-                  hintText: "Enter your password here"
+                  hintText: "Enter password here"
               ),
               style: TextStyle(
                   fontSize: 20
@@ -85,8 +86,8 @@ class _loginPageState extends State<loginPage> {
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 130, vertical: 20),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(7)),
-                    color: Color(0xfff96060)
+                    borderRadius: BorderRadius.all(Radius.circular(9)),
+                    color: Color(0xFFA14DDA)
                   ),
                   child: Text("Log In", style: TextStyle(
                     fontSize: 18,

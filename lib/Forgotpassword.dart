@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newtotolist/ResetPassword.dart';
+import './ResetPassword.dart';
 class ForgotPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

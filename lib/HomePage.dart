@@ -3,7 +3,8 @@ import 'package:newtotolist/CheckList.dart';
 import 'package:newtotolist/NewTask.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:newtotolist/NewNote.dart';
+import './NewNote.dart';
+// import 'package:newtotolist/NewNote.dart';
 
 class HomePage extends StatelessWidget {
   @override

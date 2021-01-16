@@ -37,9 +37,9 @@ class _onboardingState extends State<onboarding> {
                 child: PageView(
                   controller: _pageController,
                   children: [
-                    onBoardPage("onboard1", "Welcome to Aking"),
+                    onBoardPage("onboard1", "Welcome"),
                     onBoardPage("onboard2", "Work Happens"),
-                    onBoardPage("onboard3", "Task and Assignments"),
+                    onBoardPage("onboard3", "Todo list"),
                   ],
                   onPageChanged: (value)=>{setCurrentPage(value)},
                 ),
@@ -140,7 +140,7 @@ class _onboardingState extends State<onboarding> {
         ),
         Container(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-          child: Text("Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text", style: TextStyle(
+          child: Text("Welcome to our TODO", style: TextStyle(
             fontSize: 16,
             color: Colors.grey
           ),textAlign: TextAlign.center,),
@@ -148,6 +148,7 @@ class _onboardingState extends State<onboarding> {
       ],
     );
   }
+
   setCurrentPage(int value)
   {
     currentPage = value;
