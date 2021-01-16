@@ -82,7 +82,9 @@ class LoginPage extends StatelessWidget {
                 Expanded(
                   child: Center(
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        model.openHomePage(context);
+                      },
                       child: Container(
                         padding:
                             EdgeInsets.symmetric(horizontal: 130, vertical: 20),
