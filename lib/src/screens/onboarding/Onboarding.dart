@@ -1,107 +1,112 @@
 import 'package:flutter/material.dart';
+import 'package:newtotolist/src/screens/onboarding/onboarding_view_model.dart';
+import 'package:stacked/stacked.dart';
 import '../login_page/LoginPage.dart';
 
-class Onboarding extends StatefulWidget {
-  @override
-  _OnboardingState createState() => _OnboardingState();
-}
-
-class _OnboardingState extends State<Onboarding> {
-  int currentPage = 0;
-  PageController _pageController =
-      new PageController(initialPage: 0, keepPage: true);
+class Onboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+    return ViewModelBuilder.reactive(
+      builder: (context, model, child) {
+        return Scaffold(
+          body: Stack(
             children: [
-              Container(
-                height: MediaQuery.of(context).size.height * 0.6,
-                child: PageView(
-                  controller: _pageController,
-                  children: [
-                    onBoardPage("onboard1", "Welcome"),
-                    onBoardPage("onboard2", "Work Happens"),
-                    onBoardPage("onboard3", "Todo list"),
-                  ],
-                  onPageChanged: (value) => {setCurrentPage(value)},
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(3, (index) => getIndicator(index)),
-              )
-            ],
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              margin: EdgeInsets.only(top: 20),
-              height: 300,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('asset/image/path1.png'),
-                      fit: BoxFit.fill)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  InkWell(
-                    onTap: openLoginPage,
-                    child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 20, horizontal: 100),
-                      decoration:
-                          BoxDecoration(color: Colors.white, boxShadow: [
-                        BoxShadow(
-                            color: Colors.black.withOpacity(0.2),
-                            offset: Offset(0, 9),
-                            blurRadius: 20,
-                            spreadRadius: 3)
-                      ]),
-                      child: Text(
-                        "Get Started",
-                        style: TextStyle(fontSize: 16),
-                      ),
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.6,
+                    child: PageView(
+                      controller: model.pageController,
+                      children: [
+                        onBoardPage("onboard1", "Welcome", context),
+                        onBoardPage("onboard2", "Work Happens", context),
+                        onBoardPage("onboard3", "Todo list", context),
+                      ],
+                      onPageChanged: (value) => {model.setPage = value},
                     ),
                   ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:
+                        List.generate(3, (index) => getIndicator(index, model)),
                   )
                 ],
               ),
-            ),
-          )
-        ],
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  margin: EdgeInsets.only(top: 20),
+                  height: 300,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('asset/image/path1.png'),
+                          fit: BoxFit.fill)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          model.openLoginPage(context);
+                        },
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 100),
+                          decoration:
+                              BoxDecoration(color: Colors.white, boxShadow: [
+                            BoxShadow(
+                                color: Colors.black.withOpacity(0.2),
+                                offset: Offset(0, 9),
+                                blurRadius: 20,
+                                spreadRadius: 3)
+                          ]),
+                          child: Text(
+                            "Get Started",
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        "Login",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        );
+      },
+      viewModelBuilder: () => OnboardingViewModel(),
+    );
+  }
+
+  AnimatedContainer getIndicator(int pageNo, OnboardingViewModel model) {
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 100),
+      height: 10,
+      width: (model.currentPage == pageNo) ? 20 : 10,
+      margin: EdgeInsets.symmetric(horizontal: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(
+          Radius.circular(5),
+        ),
+        color: (model.currentPage == pageNo) ? Colors.black : Colors.grey,
       ),
     );
   }
 
-  AnimatedContainer getIndicator(int pageNo) {
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 100),
-      height: 10,
-      width: (currentPage == pageNo) ? 20 : 10,
-      margin: EdgeInsets.symmetric(horizontal: 5),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-          color: (currentPage == pageNo) ? Colors.black : Colors.grey),
-    );
-  }
-
-  Column onBoardPage(String img, String title) {
+  Column onBoardPage(String img, String title, BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -136,15 +141,5 @@ class _OnboardingState extends State<Onboarding> {
         )
       ],
     );
-  }
-
-  setCurrentPage(int value) {
-    currentPage = value;
-    setState(() {});
-  }
-
-  openLoginPage() {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => LoginPage()));
   }
 }
