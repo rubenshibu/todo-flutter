@@ -11,7 +11,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     Timer(
-      Duration(seconds: 3),
+      Duration(seconds: 5),
       openOnBoard,
     );
     super.initState();
@@ -21,11 +21,21 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(
-            image: AssetImage('asset/image/aking.png'),
-          )),
+        child: Text(
+          'TERMINAL',
+          style: TextStyle(
+              fontSize: 35,
+              color: Colors.purple,
+              fontWeight: FontWeight.w700,
+              fontStyle: FontStyle.italic,
+              letterSpacing: 8,
+              wordSpacing: 20,
+              shadows: [
+                Shadow(
+                    color: Colors.blueAccent,
+                    offset: Offset(2, 1),
+                    blurRadius: 10)
+              ]),
         ),
       ),
     );
