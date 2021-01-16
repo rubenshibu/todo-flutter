@@ -1,24 +1,12 @@
 import 'package:flutter/material.dart';
 import '../homepage/HomePage.dart';
 
-class PasswordChangedSuccessfully extends StatelessWidget {
+class PasswordChangedSuccessfully extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'avenir'
-      ),
-      home: passwordChangedSuccessfully(),
-    );
-  }
-}
-class passwordChangedSuccessfully extends StatefulWidget {
-  @override
-  _passwordChangedSuccessfullyState createState() => _passwordChangedSuccessfullyState();
+  _PasswordChangedSuccessfullyState createState() => _PasswordChangedSuccessfullyState();
 }
 
-class _passwordChangedSuccessfullyState extends State<passwordChangedSuccessfully> {
+class _PasswordChangedSuccessfullyState extends State<PasswordChangedSuccessfully> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

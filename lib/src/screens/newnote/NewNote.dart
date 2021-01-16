@@ -1,23 +1,12 @@
 import 'package:flutter/material.dart';
 import '../homepage/HomePage.dart';
-class NewNote extends StatelessWidget {
+
+class NewNote extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'avenir'
-      ),
-      home: newNote(),
-    );
-  }
-}
-class newNote extends StatefulWidget {
-  @override
-  _newNoteState createState() => _newNoteState();
+  _NewNoteState createState() => _NewNoteState();
 }
 
-class _newNoteState extends State<newNote> {
+class _NewNoteState extends State<NewNote> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

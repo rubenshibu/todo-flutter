@@ -1,24 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:newtotolist/src/screens/homepage/HomePage.dart';
-import '../../HomePage.dart';
-class CheckList extends StatelessWidget {
+class CheckList extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'avenir'
-      ),
-      home: checkList(),
-    );
-  }
-}
-class checkList extends StatefulWidget {
-  @override
-  _checkListState createState() => _checkListState();
+  _CheckListState createState() => _CheckListState();
 }
 
-class _checkListState extends State<checkList> {
+class _CheckListState extends State<CheckList> {
   bool checked = false;
   List<int> selectedList = [];
   @override

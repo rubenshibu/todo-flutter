@@ -1,23 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:newtotolist/src/screens/forgot_password/Forgotpassword.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'avenir'),
-      home: loginPage(),
-    );
-  }
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class loginPage extends StatefulWidget {
-  @override
-  _loginPageState createState() => _loginPageState();
-}
-
-class _loginPageState extends State<loginPage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

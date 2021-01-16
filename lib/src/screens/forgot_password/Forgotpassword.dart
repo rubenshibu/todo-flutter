@@ -1,23 +1,12 @@
 import 'package:flutter/material.dart';
 import '../resetpassword/ResetPassword.dart';
-class ForgotPassword extends StatelessWidget {
+
+class ForgotPassword extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'avenir',
-      ),
-      home: forgotPassword(),
-    );
-  }
-}
-class forgotPassword extends StatefulWidget {
-  @override
-  _forgotPasswordState createState() => _forgotPasswordState();
+  _ForgotPasswordState createState() => _ForgotPasswordState();
 }
 
-class _forgotPasswordState extends State<forgotPassword> {
+class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
