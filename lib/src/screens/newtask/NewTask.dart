@@ -188,7 +188,7 @@ class _NewTaskState extends State<NewTask> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(15)),
-                              color: Color(0xffff96060)
+                              color: Color(0xFF8545EC)
                             ),
                             child: Center(
                               child: Text("Add Task", style: TextStyle(

@@ -90,7 +90,7 @@ class LoginPage extends StatelessWidget {
                             EdgeInsets.symmetric(horizontal: 130, vertical: 20),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(7)),
-                            color: Color(0xfff96060)),
+                            color: Color(0xFF8545EC)),
                         child: Text(
                           "Log In",
                           style: TextStyle(fontSize: 18, color: Colors.white),

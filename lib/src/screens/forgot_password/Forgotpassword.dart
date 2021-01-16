@@ -25,28 +25,33 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20,),
-            Text("Forgot Password", style: TextStyle(
-                fontSize: 35
-            ),),
-            Text("Please enter your mail ID to receive your password and reset information", style: TextStyle(
-                fontSize: 18,
-                color: Colors.grey
-            ),),
-            SizedBox(height: 20,),
-            Text("Mail ID", style: TextStyle(
-              fontSize: 23,
-            ),),
-            TextField(
-              decoration: InputDecoration(
-                  hintText: "john@example.com"
-              ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Forgot Password",
+              style: TextStyle(fontSize: 35),
+            ),
+            Text(
+              "Please enter your mail ID to receive your password and reset information",
+              style: TextStyle(fontSize: 18, color: Colors.grey),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Mail ID",
               style: TextStyle(
-                  fontSize: 20
+                fontSize: 23,
               ),
             ),
-            SizedBox(height: 40,),
-
+            TextField(
+              decoration: InputDecoration(hintText: "john@example.com"),
+              style: TextStyle(fontSize: 20),
+            ),
+            SizedBox(
+              height: 40,
+            ),
             Center(
               child: InkWell(
                 onTap: openResetPassword,
@@ -54,12 +59,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   padding: EdgeInsets.symmetric(horizontal: 130, vertical: 20),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: Color(0xfff96060)
+                      color: Color(0xFFC230EE)),
+                  child: Text(
+                    "Send",
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
-                  child: Text("Send Request", style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white
-                  ),),
                 ),
               ),
             )
@@ -68,9 +72,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       ),
     );
   }
-  void openResetPassword()
-  {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>ResetPassword()));
+
+  void openResetPassword() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => ResetPassword()));
   }
 }
-

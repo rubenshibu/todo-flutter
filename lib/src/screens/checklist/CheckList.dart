@@ -13,7 +13,7 @@ class _CheckListState extends State<CheckList> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xfff96060),
+        backgroundColor: Color(0xFF8545EC),
         elevation: 0,
         title: Text("New CheckList", style: TextStyle(
             fontSize: 25
@@ -32,7 +32,7 @@ class _CheckListState extends State<CheckList> {
           children: [
             Container(
               height: 30,
-              color: Color(0xfff96060),
+              color: Color(0xFF8545EC),
             ),
             Positioned(
               bottom: 0,
@@ -156,7 +156,7 @@ class _CheckListState extends State<CheckList> {
                                   width: 50,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.all(Radius.circular(10)),
-                                      color: Color(0xff3d3a62)
+                                      color: Color(0xFF8545EC)
                                   ),
                                 )
                               ],
@@ -167,7 +167,7 @@ class _CheckListState extends State<CheckList> {
                               width: double.infinity,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                                  color: Color(0xffff96060)
+                                  color: Color(0xFF8545EC)
                               ),
                               child: Center(
                                 child: Text("Add Checklist", style: TextStyle(

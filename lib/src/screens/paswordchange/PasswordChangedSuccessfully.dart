@@ -37,7 +37,7 @@ class _PasswordChangedSuccessfullyState extends State<PasswordChangedSuccessfull
                 padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(7)),
-                    color: Color(0xfff96060)
+                    color: Color(0xFF8545EC)
                 ),
                 child: Text("Continue", style: TextStyle(
                     fontSize: 18,

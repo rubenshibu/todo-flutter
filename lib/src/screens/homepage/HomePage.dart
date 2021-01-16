@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Container(
                 height: 70,
-                color: Color(0xfff96060),
+                color: Color(0xFF8545EC),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       taskWidget(
-                          Color(0xfff96060), "Meeting with someone", "9:00 AM"),
+                          Color(0xFF8545EC), "Meeting with someone", "9:00 AM"),
                       taskWidget(
                           Colors.blue, "Meeting with someone", "9:00 AM"),
                       taskWidget(
@@ -256,7 +256,7 @@ class _HomePageState extends State<HomePage> {
                               gradient: LinearGradient(
                                 begin: Alignment.topRight,
                                 end: Alignment.bottomLeft,
-                                colors: [Color(0xfff96060), Colors.red],
+                                colors: [Color(0xFF8545EC), Colors.red],
                               ),
                               shape: BoxShape.circle),
                           child: Center(
