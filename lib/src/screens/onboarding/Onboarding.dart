@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'LoginPage.dart';
+import '../login_page/LoginPage.dart';
 class Onboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

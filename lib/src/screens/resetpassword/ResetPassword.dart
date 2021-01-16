@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './PasswordChangedSuccessfully.dart';
+import '../paswordchange/PasswordChangedSuccessfully.dart';
 
 class ResetPassword extends StatelessWidget {
   @override

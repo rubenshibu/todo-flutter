@@ -1,5 +1,7 @@
 import 'dart:async';
-import 'Onboarding.dart';
+import 'package:newtotolist/src/screens/splashscreen/splash_screen.dart';
+
+import 'src/screens/onboarding/Onboarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,35 +21,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  void initState() {
-    // TODO: implement initState
-    Timer(Duration(seconds: 3), openOnBoard);
-    super.initState();
-  }
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('asset/image/aking.png'),
-            )
-          ),
-        ),
-      ),
-    );
-  }
-  void openOnBoard()
-  {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>Onboarding()));
-  }
-}
-

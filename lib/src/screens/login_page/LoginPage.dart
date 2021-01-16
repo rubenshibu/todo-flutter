@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Forgotpassword.dart';
+import '../forgot_password/Forgotpassword.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class _loginPageState extends State<loginPage> {
             ),),
             TextField(
               decoration: InputDecoration(
-                hintText: "Shan Shaji"
+                hintText: "Username"
               ),
               style: TextStyle(
                 fontSize: 20

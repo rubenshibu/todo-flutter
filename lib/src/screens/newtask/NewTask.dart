@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newtotolist/HomePage.dart';
+import 'package:newtotolist/src/screens/homepage/HomePage.dart';
 class NewTask extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:newtotolist/CheckList.dart';
-import 'package:newtotolist/NewTask.dart';
+import 'package:newtotolist/src/checklist/CheckList.dart';
+import 'package:newtotolist/src/screens/newtask/NewTask.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import './NewNote.dart';
+import '../newnote/NewNote.dart';
 // import 'package:newtotolist/NewNote.dart';
 
 class HomePage extends StatelessWidget {

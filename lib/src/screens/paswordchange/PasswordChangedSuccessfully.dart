@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './HomePage.dart';
+import '../homepage/HomePage.dart';
 
 class PasswordChangedSuccessfully extends StatelessWidget {
   @override

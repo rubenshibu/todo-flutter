@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'HomePage.dart';
+import 'package:newtotolist/src/screens/homepage/HomePage.dart';
+import '../../HomePage.dart';
 class CheckList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
